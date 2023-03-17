@@ -46,4 +46,14 @@
 }
 .product .right {
   margin-left: 35px;
+}
+.product .right .user-info {
+  font-size: 14px;
+  color: #999999;
+}
+.product .right .user-info a {
+  color: #999999;
+}
+.product .right .user-info span {
+  margin-left: 10px;
 }/*# sourceMappingURL=product.css.map */

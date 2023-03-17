@@ -8,6 +8,8 @@ export default {
     fetch('orderchamp product page.json').then((response) => {
       response.json().then((data) => {console.log(data)
         this.loading = false;
+        this.user.name = data.data.storefrontBySlug.name;
+        this.user.minimumOrderAmount = data.data.storefrontBySlug.minimumOrderAmount;
         this.images = data.data.storefrontBySlug.listing.images.edges.map((record) => {
           return {
             thumbnailUrl: record.node.small,
@@ -22,6 +24,10 @@ export default {
   data() {
     return {
       loading: false,
+      user: {
+        name: null,
+        minimumOrderAmount: null,
+      },
       images: [],
       imageSelected: null,
       description: '',
@@ -69,6 +75,10 @@ export default {
           </div>
         </div>
         <div class="right">
+          <div class="user-info">
+          <a href="#">{{user.name}}</a> - €{{parseFloat(user.minimumOrderAmount).toFixed(2)}} Order minimum
+          </div>
+
           <button>ADD TO CART</button>
         </div>
       </template>

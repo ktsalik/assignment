@@ -57,5 +57,18 @@
 
   .right {
     margin-left: 35px;
+
+    .user-info {
+      font-size: 14px;
+      color: #999999;
+
+      a {
+        color: #999999;
+      }
+
+      span {
+        margin-left: 10px;
+      }
+    }
   }
 }

@@ -1,0 +1,24 @@
+.product-variant {
+  display: flex;
+  font-size: 14px;
+}
+.product-variant .quantity-selector {
+  flex: 1;
+}
+.product-variant .name {
+  width: 30%;
+}
+.product-variant .price {
+  width: 20%;
+  text-align: center;
+  font-weight: 600;
+}
+.product-variant .msrp {
+  width: 20%;
+  text-align: center;
+  font-weight: 600;
+}
+.product-variant i {
+  width: 5%;
+  color: #5FA789;
+}/*# sourceMappingURL=product-variant.css.map */

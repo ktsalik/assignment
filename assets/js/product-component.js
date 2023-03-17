@@ -1,4 +1,5 @@
 import productRatingComponent from "./product-rating-component.js";
+import productVariantsComponent from "./product-variants-component.js";
 
 export default {
   props: [
@@ -23,6 +24,14 @@ export default {
         this.description = data.data.storefrontBySlug.listing.description;
         this.rating.score = data.data.storefrontBySlug.reviewScore;
         this.rating.reviewsCount = data.data.storefrontBySlug.reviews.totalCount;
+        this.variants = data.data.storefrontBySlug.listing.variants.edges.map((record) => {
+          return {
+            id: record.node.id,
+            name: record.node.options.map((option) => option.value).join(' '),
+            price: record.node.price,
+            msrp: record.node.msrp,
+          };
+        });
       });
     });
   },
@@ -42,6 +51,8 @@ export default {
         score: null,
         reviewsCount: null,
       },
+      variants: [],
+      totalCostAmount: 0,
     };
   },
   methods: {
@@ -50,10 +61,14 @@ export default {
     },
     expandDescription() {
       this.descriptionExpanded = true;
-    }
+    },
+    onVariantChoose({ variants, totalCostAmount }) {
+      this.totalCostAmount = totalCostAmount;
+    },
   },
   components: {
     productRating: productRatingComponent,
+    productVariants: productVariantsComponent,
   },
   template: `
     <div class="product">
@@ -99,7 +114,15 @@ export default {
 
           <h1 class="title">{{title}}</h1>
 
-          <button>ADD TO CART</button>
+          <product-variants
+            :data="variants"
+            @variantChoose="onVariantChoose"
+          ></product-variants>
+
+          <button>
+            <span>ADD TO CART</span>
+            <span v-if="totalCostAmount > 0">€{{parseFloat(totalCostAmount).toFixed(2)}}</span>
+          </button>
         </div>
       </template>
     </div>

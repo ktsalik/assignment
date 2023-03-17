@@ -1,0 +1,19 @@
+.product-variants .header {
+  display: flex;
+}
+.product-variants .header span:nth-of-type(1) {
+  flex: 1;
+}
+.product-variants .header span:nth-of-type(2) {
+  width: 30%;
+}
+.product-variants .header span:nth-of-type(3), .product-variants .header span:nth-of-type(4) {
+  width: 20%;
+  text-align: center;
+}
+.product-variants .header span:nth-of-type(5) {
+  width: 5%;
+}
+.product-variants .product-variant {
+  margin: 10px 0;
+}/*# sourceMappingURL=product-variants.css.map */

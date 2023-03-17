@@ -1,6 +1,26 @@
 .product {
   width: 1180px;
   max-width: 100%;
+  display: flex;
   margin: 0 auto;
   margin-top: 50px;
+
+  .thumbnails {
+
+  }
+
+  .left {
+    margin-left: 25px;
+    width: 50%;
+
+    .image {
+      width: 100%;
+      padding-bottom: 80%;
+      border: 1px solid #EEEEEE;
+    }
+  }
+
+  .right {
+    margin-left: 35px;
+  }
 }

@@ -1,6 +1,19 @@
 .product {
   width: 1180px;
   max-width: 100%;
+  display: flex;
   margin: 0 auto;
   margin-top: 50px;
+}
+.product .left {
+  margin-left: 25px;
+  width: 50%;
+}
+.product .left .image {
+  width: 100%;
+  padding-bottom: 80%;
+  border: 1px solid #EEEEEE;
+}
+.product .right {
+  margin-left: 35px;
 }/*# sourceMappingURL=product.css.map */

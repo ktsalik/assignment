@@ -21,7 +21,14 @@ export default {
     <div class="product">
       <span v-if="loading">Please Wait</span>
       <template v-else="!loading">
-        product preview
+        <div class="thumbnails">thumbnails</div>
+        <div class="left">
+          <div class="image">image</div>
+          <div class="description">description</div>
+        </div>
+        <div class="right">
+          <button>ADD TO CART</button>
+        </div>
       </template>
     </div>
   `,

@@ -2,8 +2,7 @@
   width: 1180px;
   max-width: 100%;
   display: flex;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 50px auto;
 }
 .product .thumbnails {
   width: 75px;
@@ -31,6 +30,19 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+.product .left .description h3 {
+  font-weight: 600;
+  font-size: 22px;
+}
+.product .left .description p {
+  margin: 0;
+}
+.product .left .description .btn-read-more {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 .product .right {
   margin-left: 35px;

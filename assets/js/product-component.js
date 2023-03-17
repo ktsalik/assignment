@@ -6,7 +6,7 @@ export default {
     this.loading = true;
 
     fetch('orderchamp product page.json').then((response) => {
-      response.json().then((data) => {
+      response.json().then((data) => {console.log(data)
         this.loading = false;
         this.images = data.data.storefrontBySlug.listing.images.edges.map((record) => {
           return {
@@ -15,6 +15,7 @@ export default {
           };
         });
         this.imageSelected = this.images[0];
+        this.description = data.data.storefrontBySlug.listing.description;
       });
     });
   },
@@ -23,11 +24,16 @@ export default {
       loading: false,
       images: [],
       imageSelected: null,
+      description: '',
+      descriptionExpanded: false,
     };
   },
   methods: {
     onImageSelect(index) {
       this.imageSelected = this.images[index];
+    },
+    expandDescription() {
+      this.descriptionExpanded = true;
     }
   },
   template: `
@@ -44,7 +50,23 @@ export default {
         </div>
         <div class="left">
           <div class="image" :style="{ 'background-image': 'url(' + imageSelected.url + ')' }"></div>
-          <div class="description">description</div>
+          <div class="description">
+            <h3>Information</h3>
+            <p>
+              <template v-if="!descriptionExpanded">
+                {{description.split(' ').slice(0, 70).join(' ')}}...
+              </template>
+
+              <template v-if="descriptionExpanded">
+                {{description}}
+              </template>
+            </p>
+            <button
+              v-if="!descriptionExpanded"
+              class="btn-read-more"
+              @click="expandDescription"
+            >Read More</button>
+          </div>
         </div>
         <div class="right">
           <button>ADD TO CART</button>

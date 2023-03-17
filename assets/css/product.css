@@ -5,6 +5,21 @@
   margin: 0 auto;
   margin-top: 50px;
 }
+.product .thumbnails {
+  width: 75px;
+}
+.product .thumbnails .thumbnail {
+  width: 100%;
+  padding-bottom: 100%;
+  border: 1px solid #EEEEEE;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+.product .thumbnails .thumbnail:not(:first-of-type) {
+  margin-top: 10px;
+}
 .product .left {
   margin-left: 25px;
   width: 50%;
@@ -13,6 +28,9 @@
   width: 100%;
   padding-bottom: 80%;
   border: 1px solid #EEEEEE;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .product .right {
   margin-left: 35px;

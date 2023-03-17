@@ -6,7 +6,21 @@
   margin-top: 50px;
 
   .thumbnails {
+    width: 75px;
 
+    .thumbnail {
+      width: 100%;
+      padding-bottom: 100%;
+      border: 1px solid #EEEEEE;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      cursor: pointer;
+
+      &:not(:first-of-type) {
+        margin-top: 10px;
+      }
+    }
   }
 
   .left {
@@ -17,6 +31,9 @@
       width: 100%;
       padding-bottom: 80%;
       border: 1px solid #EEEEEE;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
     }
   }
 

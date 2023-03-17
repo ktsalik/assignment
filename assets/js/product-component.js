@@ -76,7 +76,7 @@ export default {
         </div>
         <div class="right">
           <div class="user-info">
-          <a href="#">{{user.name}}</a> - €{{parseFloat(user.minimumOrderAmount).toFixed(2)}} Order minimum
+            <a href="#">{{user.name}}</a> - €{{parseFloat(user.minimumOrderAmount).toFixed(2)}} Order minimum
           </div>
 
           <button>ADD TO CART</button>

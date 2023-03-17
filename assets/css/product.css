@@ -45,6 +45,7 @@
   cursor: pointer;
 }
 .product .right {
+  flex: 1;
   margin-left: 35px;
 }
 .product .right .user-info {

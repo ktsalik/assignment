@@ -1,3 +1,5 @@
+import productRatingComponent from "./product-rating-component.js";
+
 export default {
   props: [
     'id',
@@ -18,6 +20,8 @@ export default {
         });
         this.imageSelected = this.images[0];
         this.description = data.data.storefrontBySlug.listing.description;
+        this.rating.score = data.data.storefrontBySlug.reviewScore;
+        this.rating.reviewsCount = data.data.storefrontBySlug.reviews.totalCount;
       });
     });
   },
@@ -32,6 +36,10 @@ export default {
       imageSelected: null,
       description: '',
       descriptionExpanded: false,
+      rating: {
+        score: null,
+        reviewsCount: null,
+      },
     };
   },
   methods: {
@@ -41,6 +49,9 @@ export default {
     expandDescription() {
       this.descriptionExpanded = true;
     }
+  },
+  components: {
+    productRating: productRatingComponent,
   },
   template: `
     <div class="product">
@@ -78,6 +89,11 @@ export default {
           <div class="user-info">
             <a href="#">{{user.name}}</a> - €{{parseFloat(user.minimumOrderAmount).toFixed(2)}} Order minimum
           </div>
+
+          <product-rating
+            :score="4.5"
+            :reviewsCount="rating.reviewsCount"
+          ></product-rating>
 
           <button>ADD TO CART</button>
         </div>

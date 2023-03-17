@@ -1,0 +1,17 @@
+.product-rating {
+  display: flex;
+  font-size: 14px;
+}
+.product-rating .stars i {
+  margin: 0 1px;
+  font-size: 11px;
+  color: #F9AD7B;
+}
+.product-rating .score {
+  margin-left: 5px;
+  font-weight: 600;
+}
+.product-rating .reviews-count {
+  margin-left: 5px;
+  color: #999999;
+}/*# sourceMappingURL=product-rating.css.map */

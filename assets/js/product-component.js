@@ -19,6 +19,7 @@ export default {
           };
         });
         this.imageSelected = this.images[0];
+        this.title = data.data.storefrontBySlug.listing.title;
         this.description = data.data.storefrontBySlug.listing.description;
         this.rating.score = data.data.storefrontBySlug.reviewScore;
         this.rating.reviewsCount = data.data.storefrontBySlug.reviews.totalCount;
@@ -34,6 +35,7 @@ export default {
       },
       images: [],
       imageSelected: null,
+      title: '',
       description: '',
       descriptionExpanded: false,
       rating: {
@@ -94,6 +96,8 @@ export default {
             :score="4.5"
             :reviewsCount="rating.reviewsCount"
           ></product-rating>
+
+          <h1 class="title">{{title}}</h1>
 
           <button>ADD TO CART</button>
         </div>

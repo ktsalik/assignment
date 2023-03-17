@@ -119,9 +119,14 @@ export default {
             @variantChoose="onVariantChoose"
           ></product-variants>
 
-          <button>
+          <button class="btn-add-to-cart">
             <span>ADD TO CART</span>
             <span v-if="totalCostAmount > 0">€{{parseFloat(totalCostAmount).toFixed(2)}}</span>
+          </button>
+
+          <button class="btn-favorite">
+            <i class="fa-solid fa-heart"></i>
+            <span>ADD TO FAVORITES</span>
           </button>
         </div>
       </template>

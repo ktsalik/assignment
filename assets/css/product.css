@@ -69,4 +69,32 @@
 }
 .product .right .product-variants {
   margin-top: 25px;
+}
+.product .right .btn-add-to-cart {
+  outline: none;
+  border: none;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 15px 20px;
+  background-color: #5FA789;
+  color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+.product .right .btn-favorite {
+  outline: none;
+  border: none;
+  width: 300px;
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #333333;
+  text-align: center;
+  color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+.product .right .btn-favorite span {
+  margin-left: 10px;
 }/*# sourceMappingURL=product.css.map */

@@ -1,0 +1,36 @@
+.header {
+  padding: 15px 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  .content {
+    width: 1180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    .logo {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .search-input {
+
+      input {
+        outline: none;
+        border: none;
+        width: 300px;
+        padding: 10px;
+        max-width: 100%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      }
+    }
+
+    .menu {
+
+      i {
+        margin: 0 10px;
+      }
+    }
+  }
+}
